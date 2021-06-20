@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
@@ -85,7 +86,7 @@ public class WalletFilterChooseMoneyRangeActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Intent returnIntent = new Intent();
-                        returnIntent.putExtra("result",et_money.getText().toString());
+                        returnIntent.putExtra("result", et_money.getText().toString());
                         setResult(2,returnIntent);
                         finish();
                     }
@@ -168,7 +169,9 @@ public class WalletFilterChooseMoneyRangeActivity extends AppCompatActivity {
         tv_all.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent returnIntent = new Intent();
+                setResult(0,returnIntent);
+                finish();
             }
         });
         tv_more_than.setOnClickListener(new View.OnClickListener() {

@@ -64,17 +64,23 @@ public class WalletFilterActivity extends AppCompatActivity{
 
     public void getActivityResultMoney(int resultCode,Intent data) {
         switch (resultCode) {
+            case 0: {
+                sp_more_than_money = "";
+                sp_money = "";
+                sp_less_than_money = "";
+                tv_range_money.setText("Tất cả");
+            } break;
             case 1: {
                 sp_less_than_money = "";
                 sp_money = "";
-                sp_more_than_money =data.getStringExtra("result");
+                sp_more_than_money = data.getStringExtra("result");
                 tv_range_money.setText("Lớn hơn " + sp_more_than_money + "đ");
             }break;
             case 2: {
                 sp_more_than_money = "";
                 sp_money = "";
                 sp_less_than_money = data.getStringExtra("result");
-                tv_range_money.setText("Nhỏ hơn " + sp_more_than_money + "đ");
+                tv_range_money.setText("Nhỏ hơn " + sp_less_than_money + "đ");
             }break;
             case 3: {
                 sp_money = "";
