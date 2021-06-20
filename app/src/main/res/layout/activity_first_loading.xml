@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white" android:orientation="vertical"
+              android:paddingRight="10dp"
+              android:paddingLeft="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="serif"
+            android:text="Chào mừng!"
+            android:textColor="#267836"
+            android:textSize="46sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="186dp"
+            android:layout_height="168dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/logo" />
+
+        <!--        <pl.droidsonroids.gif.GifImageView-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:background="@drawable/ani_pigmoney"/>-->
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="203dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="Quản lý tài chính hiệu quả với MoneyManager"
+            android:textColor="#424242"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="70dp"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/first_loading_btn_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#40874D"
+            android:text="Lần đầu sử dụng" />
+
+        <Button
+            android:id="@+id/first_loading_btn_signin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#40874D"
+            android:text="Đã sử dụng" />
+    </LinearLayout>
+</LinearLayout>

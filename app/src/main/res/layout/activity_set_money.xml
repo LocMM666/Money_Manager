@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:gravity="center" android:paddingLeft="20dp"
+              android:paddingTop="20dp" android:paddingRight="20dp" android:paddingBottom="20dp"
+              android:background="@color/white">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center">
+        <TextView
+                android:text="Hãy nhập số tiền khởi đầu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView9" android:textSize="22sp"
+                android:textColor="@color/green_main" android:layout_marginBottom="10dp"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/set_money_et_money" android:hint="Số tiền" android:textColorHint="@color/black"
+                android:textColor="@color/black" android:backgroundTint="@color/black"/>
+    </LinearLayout>
+    <TextView
+            android:text="Tiếp theo >"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/set_money_tv_next" android:layout_gravity="right"
+            android:textColor="@color/green_main" android:textSize="18dp"/>
+</LinearLayout>

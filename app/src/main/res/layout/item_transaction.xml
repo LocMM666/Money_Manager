@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:background="@color/white" android:layout_marginTop="5dp" android:layout_marginBottom="5dp">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp">
+
+        <ImageView
+                android:id="@+id/item_transaction_iv_category"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="15dp"
+                app:srcCompat="@drawable/ic_calculator"/>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/item_transaction_tv_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="2dp"
+                    android:text="Mua"
+                    android:textColor="@color/black"/>
+
+            <TextView
+                    android:id="@+id/item_transaction_tv_note"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mua Từ Ngọc Huy"
+                    android:textColor="@color/grey_line_dark"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/item_transaction_tv_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="2dp"
+                    android:text="9,000"
+                    android:textColor="@color/black"/>
+
+            <TextView
+                    android:id="@+id/item_transaction_tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="08/05/2001"
+                    android:textColor="@color/black"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

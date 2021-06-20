@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white">
+
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/ic_arrow_back"
+            android:id="@+id/signin_ib_back" android:backgroundTint="#ffffff"/>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:paddingLeft="35dp" android:paddingRight="35dp"
+            android:layout_marginBottom="20dp">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView4" android:text="Đăng nhập"
+                android:textSize="22sp" android:layout_gravity="center_horizontal" android:textColor="#000000"
+                android:layout_marginBottom="10dp" android:fontFamily="serif"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_gravity="center_horizontal"
+                android:paddingLeft="35dp" android:paddingRight="35dp" android:id="@+id/signin_form"
+                android:layout_marginBottom="20dp">
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:layout_marginBottom="10dp">
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/signin_et_username"
+                        android:hint="Tên tài khoản"
+                        android:textColor="#000000" android:textColorHint="@color/grey_main"
+                        android:backgroundTint="@color/grey_main"/>
+                <TextView
+                        android:text="Lỗi username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/signin_tv_error_username"
+                        android:paddingLeft="5dp" android:paddingRight="5dp" android:textColor="@color/red_form_error"
+                        android:visibility="gone"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:layout_marginBottom="10dp">
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:ems="10"
+                        android:id="@+id/signin_et_password" android:hint="Mật khẩu"
+                        android:textColorHint="@color/grey_main" android:textColor="#000"
+                        android:backgroundTint="@color/grey_main"/>
+                <TextView
+                        android:text="Lỗi password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/signin_tv_error_password"
+                        android:paddingLeft="5dp" android:paddingRight="5dp" android:textColor="@color/red_form_error"
+                        android:visibility="gone"/>
+            </LinearLayout>
+            <Button
+                    android:text="ĐĂNG NHẬP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/signin_btn_signin"
+                    android:backgroundTint="@color/green_main"
+                    android:layout_marginBottom="10dp"/>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:gravity="center_horizontal">
+                <TextView
+                        android:text="Bạn chưa có tài khoản ? Hãy "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textView12" android:layout_weight="0"
+                        android:textColor="#737373"/>
+                <TextView
+                        android:text="Đăng ký"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/signin_tv_signup"
+                        android:layout_weight="0"
+                        android:textColor="@color/green_main"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="20dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/textView6" android:layout_weight="1"
+                    android:background="@drawable/horizontal_line"/>
+            <TextView
+                    android:text="HOẶC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/textView8" android:layout_weight="0"
+                    android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:textColor="#515151"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/textView7" android:layout_weight="1"
+                    android:background="@drawable/horizontal_line"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/signin_ll_signin_huawei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="51dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:clickable="true"
+                app:srcCompat="@drawable/ic_huawei" />
+
+            <TextView
+                android:id="@+id/signbyhuawwei"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:clickable="true"
+                android:text="Tài khoản HUAWEI"
+                android:textColor="#FF0000" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

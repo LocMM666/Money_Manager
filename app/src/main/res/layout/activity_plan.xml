@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" android:orientation="vertical">
+
+    <TextView
+            android:text="Plan page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView14" tools:layout_editor_absoluteY="230dp"
+            tools:layout_editor_absoluteX="177dp" android:textColor="#000" android:layout_weight="1"/>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <com.google.android.material.bottomappbar.BottomAppBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+                android:layout_gravity="bottom"
+                android:id="@+id/bottomAppBar"
+                android:backgroundTint="#FFFFFF"
+                app:fabCradleMargin="-20dp">
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:layout_marginRight="18dp"
+                    android:background="@color/white" android:id="@+id/plan_bnv_menu"
+                    app:menu="@menu/menu_bottom_navigation" app:itemIconTint="@color/green_main"
+                    app:itemTextColor="@color/green_main"/>
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/plan_fab_add_transaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:backgroundTint="@color/green_floating"
+            app:fabCustomSize="48dp"
+            app:srcCompat="@android:drawable/ic_input_add"
+            app:tint="@color/white" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

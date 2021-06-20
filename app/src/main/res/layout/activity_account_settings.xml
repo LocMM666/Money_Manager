@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <ImageButton
+                android:id="@+id/account_settings_ib_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFFFFF"
+                android:src="@drawable/ic_arrow_back"/>
+
+        <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:shadowColor="#00000000"
+                android:text="Cài đặt"
+                android:textColor="@color/black"
+                android:textSize="24sp" android:gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:paddingLeft="50dp" android:paddingRight="10dp">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:text="Thông báo"
+                        android:textColor="@color/green_main"/>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switch2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:text="Gửi thông báo"
+                        android:textColor="@color/black"
+                        android:theme="@style/SwitchTheme"/>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switch3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:textColor="@color/black"
+                        android:text="Nhắc thêm giao dịch hằng ngày"
+                        android:theme="@style/SwitchTheme"/>
+
+            </LinearLayout>
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/grey_line_light"/>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="50dp" android:paddingRight="10dp">
+
+                <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hệ thống"
+                        android:textColor="@color/green_main"
+                        android:paddingTop="10dp" android:paddingBottom="10dp"/>
+
+                <TextView
+                    android:id="@+id/account_settings_tv_change_wallet_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="Đổi tên ví"
+                    android:textColor="@color/black" />
+
+                <TextView
+                        android:id="@+id/account_settings_tv_change_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Thay đổi mật khẩu"
+                        android:textColor="@color/black"
+                        android:paddingTop="15dp" android:paddingBottom="15dp"/>
+
+                <TextView
+                        android:id="@+id/account_settings_tv_report"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Báo lỗi đến nhà phát triển"
+                        android:textColor="@color/black"
+                        android:paddingTop="15dp" android:paddingBottom="15dp"/>
+
+                <TextView
+                        android:id="@+id/account_settings_tv_signout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Đăng xuất tài khoản"
+                        android:textColor="@color/black"
+                        android:paddingBottom="15dp" android:paddingTop="15dp"/>
+
+            </LinearLayout>
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/grey_line_light"/>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:paddingLeft="50dp" android:paddingRight="10dp">
+
+                <TextView
+                        android:id="@+id/textView22"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:text="Giới thiệu"
+                        android:textColor="@color/green_main"/>
+
+                <TextView
+                        android:id="@+id/textView24"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:text="Hướng dẫn"
+                        android:textColor="@color/black"/>
+
+                <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:text="Giới thiệu về MoneyManager"
+                        android:textColor="@color/black"/>
+
+            </LinearLayout>
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/grey_line_light"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
