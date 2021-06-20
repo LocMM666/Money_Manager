@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.*;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -61,6 +62,47 @@ public class WalletFilterActivity extends AppCompatActivity{
         });
     }
 
+    public void getActivityResultMoney(int resultCode,Intent data) {
+        switch (resultCode) {
+            case 1: {
+                sp_less_than_money = "";
+                sp_money = "";
+                sp_more_than_money =data.getStringExtra("result");
+                tv_range_money.setText("Lớn hơn " + sp_more_than_money + "đ");
+            }break;
+            case 2: {
+                sp_more_than_money = "";
+                sp_money = "";
+                sp_less_than_money = data.getStringExtra("result");
+                tv_range_money.setText("Nhỏ hơn " + sp_more_than_money + "đ");
+            }break;
+            case 3: {
+                sp_money = "";
+                sp_more_than_money =data.getStringExtra("moreThan");
+                sp_less_than_money = data.getStringExtra("lessThan");
+                tv_range_money.setText("Từ " + sp_more_than_money + "đ đến " + sp_less_than_money + "đ");
+            }break;
+            case 4:{
+                sp_less_than_money = "";
+                sp_more_than_money = "";
+                sp_money = data.getStringExtra("result");
+                tv_range_money.setText(sp_more_than_money + "đ");
+            } break;
+        }
+    }
+
+    public void getActivityResultTime(int resultCode,Intent data) {
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode,Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode) {
+            case 1: getActivityResultMoney(resultCode,data); break;
+            case 2: break;
+        }
+    }
 
     public void getSpinner() {
         ArrayAdapter<String> adapterGroup = new ArrayAdapter<String>(WalletFilterActivity.this,
