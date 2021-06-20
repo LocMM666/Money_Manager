@@ -98,7 +98,38 @@ public class WalletFilterActivity extends AppCompatActivity{
     }
 
     public void getActivityResultTime(int resultCode,Intent data) {
-
+        switch (resultCode) {
+            case 0: {
+                at_time = "";
+                before_time = "";
+                after_time = "";
+                tv_range_time.setText("Tất cả");
+            } break;
+            case 1: {
+                at_time = "";
+                before_time = "";
+                after_time = data.getStringExtra("result");
+                tv_range_time.setText("Sau " + sp_more_than_money + "đ");
+            }break;
+            case 2: {
+                after_time = "";
+                at_time = "";
+                before_time = data.getStringExtra("result");
+                tv_range_time.setText("Trước " + before_time + "đ");
+            }break;
+            case 3: {
+                at_time = "";
+                before_time =data.getStringExtra("before");
+                after_time = data.getStringExtra("after");
+                tv_range_time.setText("Từ " + after_time + "đ đến " + before_time + "đ");
+            }break;
+            case 4:{
+                after_time = "";
+                before_time = "";
+                at_time = data.getStringExtra("result");
+                tv_range_time.setText(sp_more_than_money + "đ");
+            } break;
+        }
     }
 
     @Override

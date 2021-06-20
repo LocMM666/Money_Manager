@@ -28,7 +28,7 @@ public class WalletFilterChooseTimeRangeActivity extends AppCompatActivity {
     ImageButton ib_back;
     public static final int ID_SET_BEFORE_TIME_DIALOG = 1;
     public static final int ID_SET_AFTER_TIME_DIALOG = 2;
-    public static final int ID_SET_IN_RANGE_TIME_DIALOG = 3;
+//    public static final int ID_SET_IN_RANGE_TIME_DIALOG = 3;
     public static final int ID_SET_AT_TIME_DIALOG = 4;
     DatePickerDialog.OnDateSetListener tv_add_before_date_listener, tv_add_after_date_listener, tv_add_at_date_listener;
 
@@ -193,6 +193,8 @@ public class WalletFilterChooseTimeRangeActivity extends AppCompatActivity {
         tv_all.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                Intent returnIntent = new Intent();
+                setResult(0,returnIntent);
                 finish();
             }
         });
