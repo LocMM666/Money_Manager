@@ -23,7 +23,7 @@ public class WalletFilterActivity extends AppCompatActivity{
     String[] rangeGroup = {"Tất cả", "Khoản chi", "Khoản thu"};
 
     Spinner sp_group;
-    TextView tv_range_money, tv_range_time;
+    TextView tv_range_money, tv_range_time, tv_search;
 
     String group = "Tất cả",
             at_time = "", before_time = "", after_time = "",
@@ -36,6 +36,7 @@ public class WalletFilterActivity extends AppCompatActivity{
         tv_range_time = findViewById(R.id.wallet_filter_tv_range_time);
         sp_group = findViewById(R.id.wallet_filter_sp_group);
         ib_back = findViewById(R.id.add_transaction_category_ib_back);
+        tv_search = findViewById(R.id.wallet_filter_tv_search);
     }
 
     private void setEventListener(){
@@ -58,6 +59,21 @@ public class WalletFilterActivity extends AppCompatActivity{
             public void onClick(View v) {
                 Intent intent = new Intent(WalletFilterActivity.this,WalletFilterChooseTimeRangeActivity.class);
                 startActivityForResult(intent,2);
+            }
+        });
+        tv_search.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intentBackWallet = new Intent();
+                intentBackWallet.putExtra("at_time",at_time);
+                intentBackWallet.putExtra("before_time",before_time);
+                intentBackWallet.putExtra("after_time",after_time);
+                intentBackWallet.putExtra("sp_money",sp_money);
+                intentBackWallet.putExtra("sp_more_than_money",sp_more_than_money);
+                intentBackWallet.putExtra("sp_less_than_money",sp_less_than_money);
+                intentBackWallet.putExtra("group",group);
+                setResult(1,intentBackWallet);
+                finish();
             }
         });
     }
