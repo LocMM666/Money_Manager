@@ -57,7 +57,7 @@ public class WalletFilterActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(WalletFilterActivity.this,WalletFilterChooseTimeRangeActivity.class);
-                startActivityForResult(intent,1);
+                startActivityForResult(intent,2);
             }
         });
     }
@@ -121,13 +121,13 @@ public class WalletFilterActivity extends AppCompatActivity{
                 at_time = "";
                 before_time =data.getStringExtra("before");
                 after_time = data.getStringExtra("after");
-                tv_range_time.setText("Từ " + after_time + "đ đến " + before_time + "đ");
+                tv_range_time.setText("Từ " + after_time + " đến " + before_time);
             }break;
             case 4:{
                 after_time = "";
                 before_time = "";
                 at_time = data.getStringExtra("result");
-                tv_range_time.setText(sp_more_than_money + "đ");
+                tv_range_time.setText(sp_more_than_money);
             } break;
         }
     }
@@ -137,7 +137,7 @@ public class WalletFilterActivity extends AppCompatActivity{
         super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode) {
             case 1: getActivityResultMoney(resultCode,data); break;
-            case 2: break;
+            case 2: getActivityResultTime(resultCode,data); break;
         }
     }
 

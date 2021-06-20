@@ -59,6 +59,7 @@ public class WalletFilterChooseMoneyRangeActivity extends AppCompatActivity {
         View view = inflater.inflate(R.layout.dialog_wallet_filter_choose_money, null);
         EditText et_money = view.findViewById(R.id.wallet_filter_choose_money_et_money);
         builder.setView(view)
+                .setTitle("Nhập số tiền")
                 .setNeutralButton("Nhập", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -82,6 +83,7 @@ public class WalletFilterChooseMoneyRangeActivity extends AppCompatActivity {
         View view = inflater.inflate(R.layout.dialog_wallet_filter_choose_money, null);
         EditText et_money = view.findViewById(R.id.wallet_filter_choose_money_et_money);
         builder.setView(view)
+                .setTitle("Nhập số tiền")
                 .setNeutralButton("Nhập", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -107,6 +109,7 @@ public class WalletFilterChooseMoneyRangeActivity extends AppCompatActivity {
         EditText et_from_money = view.findViewById(R.id.wallet_filter_choose_money_range_et_from_money);
         EditText et_to_money = view.findViewById(R.id.wallet_filter_choose_money_range_et_to_money);
         builder.setView(view)
+                .setTitle("Nhập số tiền")
                 .setNeutralButton("Nhập", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -132,6 +135,7 @@ public class WalletFilterChooseMoneyRangeActivity extends AppCompatActivity {
         View view = inflater.inflate(R.layout.dialog_wallet_filter_choose_money, null);
         EditText et_money = view.findViewById(R.id.wallet_filter_choose_money_et_money);
         builder.setView(view)
+                .setTitle("Nhập số tiền")
                 .setNeutralButton("Nhập", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

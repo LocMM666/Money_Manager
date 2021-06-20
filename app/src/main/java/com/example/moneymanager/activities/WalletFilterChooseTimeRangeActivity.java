@@ -89,6 +89,7 @@ public class WalletFilterChooseTimeRangeActivity extends AppCompatActivity {
             }
         });
         builder.setView(view)
+                .setTitle("Chọn thời gian")
                 .setNeutralButton("Nhập", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -127,6 +128,7 @@ public class WalletFilterChooseTimeRangeActivity extends AppCompatActivity {
             }
         });
         builder.setView(view)
+                .setTitle("Chọn thời gian")
                 .setNeutralButton("Nhập", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -164,6 +166,7 @@ public class WalletFilterChooseTimeRangeActivity extends AppCompatActivity {
             }
         });
         builder.setView(view)
+                .setTitle("Chọn thời gian")
                 .setNeutralButton("Nhập", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

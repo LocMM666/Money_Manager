@@ -76,6 +76,7 @@ public class WalletFilterChooseTimeRangeRangeDialog extends AppCompatDialogFragm
             }
         });
         builder.setView(view)
+                .setTitle("Chọn khoảng thời gian")
                 .setNeutralButton("Nhập", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
